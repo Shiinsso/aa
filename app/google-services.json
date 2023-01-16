@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726518372994",
+    "project_id": "saloonenavi",
+    "storage_bucket": "saloonenavi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726518372994:android:c4e215032b6ea7b520729b",
+        "android_client_info": {
+          "package_name": "com.example.saloonenavi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726518372994-v07srqh846gf4ka9nr0e4v57f7dqc9m0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnGA-F1w2o7Xe6_bm3C9waf5yauy8GOOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726518372994-v07srqh846gf4ka9nr0e4v57f7dqc9m0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
