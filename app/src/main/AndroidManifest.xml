@@ -13,6 +13,37 @@
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="31">
         <activity
+            android:name=".set_barber"
+            android:exported="false" />
+        <activity
+            android:name=".SetDateS1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DetailedActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".salonss"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".set_date"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LoginActivity"
             android:exported="false">
             <meta-data
@@ -43,8 +74,6 @@
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
