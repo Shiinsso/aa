@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -28,13 +30,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     private DrawerLayout drawerLayout;
-
+    private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
+    private Button btnLogout;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mAuth = FirebaseAuth.getInstance();
         replaceFragment(new HomeFragment());
 
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
@@ -71,7 +75,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+                mAuth = FirebaseAuth.getInstance();
+                Intent intentd = new Intent(MainActivity.this, settings.class);
+                startActivity(intentd);
                 break;
 
             case R.id.nav_share:
@@ -83,7 +89,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_logout:
-                Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+                mAuth = FirebaseAuth.getInstance();
+                mAuth.signOut();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+                Toast.makeText(MainActivity.this,"Logout Successful", Toast.LENGTH_SHORT);
                 break;
         }
 

@@ -26,7 +26,6 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     Activity context;
 
-    Button gobs1;
     private ArrayList<salons> newsArrayList;
     private String[] newsHeading;
     private int[] imageResourceID;
